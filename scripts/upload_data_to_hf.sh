@@ -3,7 +3,7 @@ set -euo pipefail
 
 if [[ $# -ne 1 ]]; then
   echo "Usage: $0 <hf_dataset_repo_id>"
-  echo "Example: $0 Jensen-JinhuiLiu/EHRSQL_PostgreSQL_data"
+  echo "Example: $0 JimHue/EHRSQL_PostgreSQL_data"
   exit 1
 fi
 
@@ -14,7 +14,7 @@ if ! command -v hf >/dev/null 2>&1; then
   exit 1
 fi
 
-hf repo create "$repo_id" --type dataset --yes || true
+hf repos create "$repo_id" --repo-type dataset --public --exist-ok
 
 hf upload "$repo_id" DATA_CARD.md README.md --repo-type dataset
 hf upload "$repo_id" data_artifacts_manifest.tsv data_artifacts_manifest.tsv --repo-type dataset

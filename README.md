@@ -24,15 +24,24 @@ The generated database payloads are intentionally excluded from this GitHub repo
 - `postgres_import/eicu/csv/`
 - `postgres_import/mimic_iii/csv/`
 
-Those files should be published in a Hugging Face Dataset repository. See
-`DATA_CARD.md` and `data_artifacts_manifest.tsv` for the suggested dataset card
-and file inventory.
+These data artifacts are hosted in the Hugging Face Dataset repository:
 
-After installing the Hugging Face CLI and logging in, upload the data artifacts
-with:
+https://huggingface.co/datasets/JimHue/EHRSQL_PostgreSQL_data
+
+Download them into this repository root with the Hugging Face CLI:
 
 ```bash
-scripts/upload_data_to_hf.sh Jensen-JinhuiLiu/EHRSQL_PostgreSQL_data
+hf download JimHue/EHRSQL_PostgreSQL_data --repo-type dataset --local-dir .
+```
+
+Or clone the dataset repository separately:
+
+```bash
+git clone https://huggingface.co/datasets/JimHue/EHRSQL_PostgreSQL_data
+cp EHRSQL_PostgreSQL_data/eicu.sqlite .
+cp EHRSQL_PostgreSQL_data/mimic_iii.sqlite .
+cp -R EHRSQL_PostgreSQL_data/postgres_import/eicu/csv postgres_import/eicu/
+cp -R EHRSQL_PostgreSQL_data/postgres_import/mimic_iii/csv postgres_import/mimic_iii/
 ```
 
 ## Rebuild

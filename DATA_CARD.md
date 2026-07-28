@@ -1,7 +1,7 @@
 ---
 license: cc-by-4.0
 task_categories:
-- text2sql
+- table-question-answering
 - question-answering
 language:
 - en
@@ -16,8 +16,8 @@ pretty_name: EHRSQL PostgreSQL Artifacts
 
 # EHRSQL PostgreSQL Artifacts
 
-This dataset repository is intended to host database artifacts generated for
-the companion GitHub repository:
+This dataset repository hosts database artifacts generated for the companion
+GitHub repository:
 
 https://github.com/Jensen-JinhuiLiu/EHRSQL_PostgreSQL
 
@@ -31,6 +31,20 @@ https://github.com/Jensen-JinhuiLiu/EHRSQL_PostgreSQL
 The companion GitHub repository contains the preprocessing scripts,
 PostgreSQL schema/load files, generated benchmark JSON files, and a checksum
 manifest for these artifacts.
+
+## Download
+
+Download directly into the companion GitHub repository root:
+
+```bash
+hf download JimHue/EHRSQL_PostgreSQL_data --repo-type dataset --local-dir .
+```
+
+Or clone this dataset repository separately:
+
+```bash
+git clone https://huggingface.co/datasets/JimHue/EHRSQL_PostgreSQL_data
+```
 
 ## Loading PostgreSQL
 
