@@ -28,6 +28,13 @@ Those files should be published in a Hugging Face Dataset repository. See
 `DATA_CARD.md` and `data_artifacts_manifest.tsv` for the suggested dataset card
 and file inventory.
 
+After installing the Hugging Face CLI and logging in, upload the data artifacts
+with:
+
+```bash
+scripts/upload_data_to_hf.sh Jensen-JinhuiLiu/EHRSQL_PostgreSQL_data
+```
+
 ## Rebuild
 
 Generate PostgreSQL import files from the SQLite databases:
