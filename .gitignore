@@ -1,0 +1,15 @@
+# Python/cache files
+__pycache__/
+*.py[cod]
+
+# macOS/editor files
+.DS_Store
+*.swp
+
+# Database artifacts hosted outside GitHub
+*.sqlite
+*.db
+postgres_import/*/csv/
+
+# Local Hugging Face staging area
+hf_dataset_upload/
